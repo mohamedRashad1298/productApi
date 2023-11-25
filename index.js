@@ -4,17 +4,17 @@ const app = require('./app');
 
 dotenv.config({ path: './config.env' });
 
-// const { DB } = process.env;
-// const password = process.env.PASSWORD;
+const { DB } = process.env;
+const password = process.env.PASSWORD;
 
-// mongoose.connect(DB.replace('<password>', password)).then(() => {
-//   console.log('DB connected');
-// });
-
-const localDB = process.env.LOCAL_DB;
-mongoose.connect(localDB).then(() => {
+mongoose.connect(DB.replace('<password>', password)).then(() => {
   console.log('DB connected');
 });
+
+// const localDB = process.env.LOCAL_DB;
+// mongoose.connect(localDB).then(() => {
+//   console.log('DB connected');
+// });
 
 const port = process.env.PORT || 3000;
 
