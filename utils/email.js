@@ -24,8 +24,8 @@ module.exports = class Email {
   }
 
   async send(tempelate, subject) {
-    console.log()
-    console.log(`${__dirname}`);
+    
+ 
     const html = pug.renderFile(
       `${__dirname}/../views/email/${tempelate}.pug`,
       {

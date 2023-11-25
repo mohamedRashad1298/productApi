@@ -47,7 +47,7 @@ await sharp(req.file.buffer)
 };
 
 exports.updateMe = catchAsync(async (req, res, next) => {
-  console.log(req.file);
+
   // console.log(req.body)
   if (req.body.password || req.body.passwordConfirm) {
     return next(

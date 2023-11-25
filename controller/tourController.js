@@ -157,7 +157,7 @@ exports.getTourWithIn = catchAsync(async (req, res, next) => {
 
   const radius = unit === 'km' ? distance / 6378.1 : distance / 3963.2;
 
-  console.log(radius);
+
   if (!lat || !lng) {
     next(
       new AppError(

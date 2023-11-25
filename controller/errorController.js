@@ -51,7 +51,7 @@ const errProdMode = (err,req, res) => {
       message: err.message,
     });
   } else {
-    // console.error('Error 🔥', err);
+    console.error('Error 🔥', err);
 
     res.status(err.statusCode || 500).json({
       status: 500,

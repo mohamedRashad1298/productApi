@@ -6,6 +6,7 @@ const tourRoute = require('./router/tourRoute');
 const reviewRoute = require('./router/reviewRoute');
 const bookingRoute = require('./router/bookingRoute');
 const AppError = require('./utils/AppError');
+const compression = require('compression')
 const globalHandeler = require('./controller/errorController');
 const rateLimiter = require('express-rate-limit');
 const helmet = require('helmet');
@@ -18,9 +19,9 @@ const cors=require('cors')
 const cookieParser = require('cookie-parser')
 
 app.use( helmet() );
-// app.use(cookieParser())
-app.use(cors())
-
+app.use(cookieParser())
+// app.use(cors())
+app.use(compression())
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
