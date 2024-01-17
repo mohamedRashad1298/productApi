@@ -1,11 +1,11 @@
-const catchAsync = require('./../utils/catchAsync');
+const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/AppError');
 const ApiFeatures = require('../utils/ApiFeatures');
 
 
 exports.getAll =model =>{ return catchAsync(async (req, res, next) => {
     let filter = {};
-    if (req.params.tourId) filter = { tour: req.params.tourId }
+    if (req.params.productId) filter = { tour: req.params.productId }
 
     const features = new ApiFeatures(model.find(filter), req.query)
       .filter()

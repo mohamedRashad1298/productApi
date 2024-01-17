@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "dev":"nodemon index.js",
     "start:prod": "NODE_ENV=production nodemon index.js",
     "debug": "ndb index.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
     "build:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
   },
+
   "author": "mohamed",
   "license": "ISC",
   "dependencies": {
@@ -53,6 +55,6 @@
     "prettier": "^3.0.3"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": "18.15.0"
   }
 }
